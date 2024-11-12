@@ -1,20 +1,13 @@
 import React from 'react';
+import IngredientList from './IngredientList';
+import Instructions from './Instructions';
 
 export default function Recipe({ name, ingerdients, steps }) {
   return (
     <section id='baked-salmon'>
       <h1>{name}</h1>
-      <ul className='ingredients'>
-        {ingerdients.map((ing, i) => (
-          <li key={i}>{ing.name}</li>
-        ))}
-      </ul>
-      <section className='instructions'>
-        <h2>Cooking Instructions</h2>
-        {steps.map((s, i) => (
-          <p key={i}>{s}</p>
-        ))}
-      </section>
+      <IngredientList ingredients={ingerdients} />
+      <Instructions title='Cooking Instructions' steps={steps} />
     </section>
   )
 }
