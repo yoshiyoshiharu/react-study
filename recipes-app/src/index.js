@@ -6,7 +6,7 @@ data = [
   {
     name: 'Baked Salmon',
     ingredients: [
-      { name:  },
+      { name: 'salmon', amount: 1, measurement: 'l lb' },
       { name: 'salt', amount: 0.5, measurement: 'teaspoon' },
       { name: 'salmon', amount: 1, measurement: 'l lb' }
     ],
