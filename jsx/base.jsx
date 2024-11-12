@@ -71,3 +71,19 @@ ReactDOM.render(
   <Menu recipes={recipes} title="Delicious Recipes"/>,
   document.getElementById('root')
 );
+
+// フラグメントで囲むことで、複数の要素を返すことができる
+function IngredientsList ({ list }) {
+  return (
+    <>
+      <h1>Ingredients</h1>
+      <ul className="ingredients">
+        {
+          list.map((ingredient, i) => (
+            <li key={i}>{ingredient.name}</li>
+          ))
+        }
+      </ul>
+    </>
+  );
+}
